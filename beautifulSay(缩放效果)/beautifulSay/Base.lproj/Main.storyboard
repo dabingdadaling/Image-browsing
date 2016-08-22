@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kXe-xT-Gpl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="bLG-tv-VJE">
+            <objects>
+                <collectionViewController id="0Mz-s0-TTG" customClass="XBHomeViewController" customModule="beautifulSay" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="td7-ju-ONO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JEe-YV-51L" customClass="XBHomeFlowLayout" customModule="beautifulSay" customModuleProvider="target">
+                            <size key="itemSize" width="146" height="131"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCell" id="4H4-cB-0GJ" customClass="XBShopCell" customModule="beautifulSay" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="146" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="146" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRY-cB-aCN">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="131"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MRY-cB-aCN" secondAttribute="bottom" id="EAH-xi-Ycv"/>
+                                    <constraint firstItem="MRY-cB-aCN" firstAttribute="top" secondItem="4H4-cB-0GJ" secondAttribute="top" id="IZE-4Z-bz4"/>
+                                    <constraint firstItem="MRY-cB-aCN" firstAttribute="leading" secondItem="4H4-cB-0GJ" secondAttribute="leading" id="MXh-8y-trY"/>
+                                    <constraint firstAttribute="trailing" secondItem="MRY-cB-aCN" secondAttribute="trailing" id="hO2-oH-7j3"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="shopImageV" destination="MRY-cB-aCN" id="jyL-DV-eZK"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0Mz-s0-TTG" id="yPT-Nj-dKd"/>
+                            <outlet property="delegate" destination="0Mz-s0-TTG" id="kgd-YU-1Ob"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="cJ4-iV-pAs"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRG-25-EYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628.5" y="219.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wpy-q7-dKS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kXe-xT-Gpl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y7T-Ib-f0F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Mz-s0-TTG" kind="relationship" relationship="rootViewController" id="CD7-IH-i4E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rf-Oe-d4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="259"/>
+        </scene>
+    </scenes>
+</document>
